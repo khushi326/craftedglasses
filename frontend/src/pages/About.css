@@ -1,0 +1,194 @@
+.about-container {
+  padding-bottom: 5rem;
+}
+
+.about-section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.about-section:last-of-type {
+  border-bottom: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.about-grid.reverse-grid {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.about-text-col h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.25rem;
+  color: var(--brand-brown);
+}
+
+.about-text-col p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.image-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 4px solid #FFFFFF;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.quote-box {
+  background-color: var(--bg-soft-pink);
+  border-left: 4px solid var(--brand-rose);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-top: 1.5rem;
+}
+
+.quote-box p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--brand-brown);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Process Cards */
+.process-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.process-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-rose);
+}
+
+.process-step {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--border-soft);
+}
+
+.process-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.process-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Values Grid */
+.values-grid {
+  margin-top: 2rem;
+}
+
+.value-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  background-color: var(--bg-soft-pink);
+  border-color: var(--border-rose);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.value-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* About CTA */
+.about-cta-section {
+  padding: 4rem 0 2rem;
+}
+
+.about-cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-cta-section p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.cta-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+  .about-grid,
+  .about-grid.reverse-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .process-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .process-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

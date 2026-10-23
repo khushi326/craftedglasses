@@ -1,0 +1,439 @@
+/* Craftedglasses Auth Pages Styling */
+
+.auth-page {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 4.5rem 1.5rem 6rem;
+
+  background: linear-gradient(180deg, var(--bg-soft-pink) 0%, var(--bg-main) 100%);
+
+  min-height: calc(100vh - 120px);
+
+}
+
+
+
+.auth-card-container {
+
+  width: 100%;
+
+  max-width: 460px;
+
+}
+
+
+
+.auth-card {
+
+  background-color: #FFFFFF;
+
+  border: 1px solid var(--border-soft);
+
+  border-radius: var(--radius-lg);
+
+  padding: 2.75rem 2.25rem 2.25rem;
+
+  box-shadow: var(--shadow-md);
+
+}
+
+
+
+/* Branding Header */
+
+.auth-header {
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+
+}
+
+
+
+.auth-brand-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.4rem;
+
+  background-color: var(--bg-card);
+
+  padding: 0.35rem 0.9rem;
+
+  border-radius: var(--radius-full);
+
+  margin-bottom: 0.85rem;
+
+  border: 1px solid var(--border-light);
+
+  text-decoration: none;
+
+  transition: var(--transition);
+
+}
+
+
+
+.auth-brand-badge:hover {
+
+  background-color: var(--bg-soft-pink);
+
+  border-color: var(--border-rose);
+
+}
+
+
+
+.auth-sparkle {
+
+  color: var(--brand-rose);
+
+  font-size: 1.1rem;
+
+}
+
+
+
+.auth-brand-name {
+
+  font-family: var(--font-serif);
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  color: var(--brand-brown);
+
+}
+
+
+
+.auth-title {
+
+  font-family: var(--font-serif);
+
+  font-size: 2.1rem;
+
+  font-weight: 700;
+
+  color: var(--brand-brown);
+
+  margin-bottom: 0.5rem;
+
+  line-height: 1.2;
+
+}
+
+
+
+.auth-subtitle {
+
+  font-size: 0.92rem;
+
+  color: var(--text-muted);
+
+  line-height: 1.5;
+
+  max-width: 360px;
+
+  margin: 0 auto;
+
+}
+
+
+
+.label-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 0.4rem;
+
+}
+
+
+
+.forgot-link {
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  color: var(--brand-rose-dark);
+
+  text-decoration: none;
+
+}
+
+
+
+.forgot-link:hover {
+
+  text-decoration: underline;
+
+}
+
+
+
+.auth-submit-btn {
+
+  margin-top: 1.5rem;
+
+  padding: 0.95rem 1.5rem;
+
+  font-size: 1rem;
+
+}
+
+
+
+/* Footer Link */
+
+.auth-footer {
+
+  text-align: center;
+
+  margin-top: 1.75rem;
+
+  padding-top: 1.25rem;
+
+  border-top: 1px solid var(--border-light);
+
+  font-size: 0.92rem;
+
+  color: var(--text-muted);
+
+}
+
+
+
+.auth-link {
+
+  color: var(--brand-rose-dark);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+}
+
+
+
+.auth-link:hover {
+
+  text-decoration: underline;
+
+}
+
+
+
+/* Modern inputs for registration */
+
+.modern-form-group {
+
+  margin-bottom: 1.25rem;
+
+}
+
+
+
+.modern-label {
+
+  display: block;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+
+  color: var(--brand-brown);
+
+  margin-bottom: 0.45rem;
+
+}
+
+
+
+.label-required {
+
+  color: var(--brand-rose);
+
+  margin-left: 2px;
+
+}
+
+
+
+.input-with-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  background-color: #FFFFFF;
+
+  border: 1.5px solid var(--border-soft);
+
+  border-radius: var(--radius-sm);
+
+  padding: 0 0.9rem;
+
+  transition: var(--transition);
+
+}
+
+
+
+.input-with-icon:focus-within {
+
+  border-color: var(--brand-rose);
+
+  box-shadow: 0 0 0 3px rgba(196, 123, 123, 0.15);
+
+}
+
+
+
+.input-icon {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--text-light);
+
+  margin-right: 0.65rem;
+
+  flex-shrink: 0;
+
+}
+
+
+
+.modern-input {
+
+  width: 100%;
+
+  border: none;
+
+  background: transparent;
+
+  padding: 0.82rem 0;
+
+  font-size: 0.95rem;
+
+  color: var(--text-main);
+
+  outline: none;
+
+  font-family: inherit;
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  .auth-card {
+
+    padding: 2.25rem 1.5rem 1.75rem;
+
+  }
+
+  .auth-title {
+
+    font-size: 1.8rem;
+
+  }
+
+}
+
+
+
+/* Auth error & success alerts */
+
+.auth-error-banner {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  background-color: #FDF2F2;
+
+  border: 1px solid #F8B4B4;
+
+  color: #9B1C1C;
+
+  padding: 0.85rem 1rem;
+
+  border-radius: var(--radius-sm);
+
+  margin-bottom: 1.25rem;
+
+  font-size: 0.88rem;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+}
+
+
+
+.auth-success-banner {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  background-color: #F0FDF4;
+
+  border: 1px solid #BBF7D0;
+
+  color: #166534;
+
+  padding: 0.85rem 1rem;
+
+  border-radius: var(--radius-sm);
+
+  margin-bottom: 1.25rem;
+
+  font-size: 0.88rem;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+}
+
+
+
+.auth-submit-btn:disabled,
+
+.modern-submit-btn:disabled {
+
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+}

@@ -1,0 +1,21 @@
+{
+  "name": "craftedglasses",
+  "version": "1.0.0",
+  "description": "Craftedglasses Full Stack Application",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "start": "npm start --prefix backend"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "mongodb",
+    "nodejs",
+    "craftedglasses"
+  ],
+  "author": "",
+  "license": "ISC"
+}

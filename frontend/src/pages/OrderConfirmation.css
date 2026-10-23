@@ -1,0 +1,179 @@
+.confirmation-container {
+  padding: 4rem 1.5rem 6rem;
+  max-width: 780px;
+}
+
+.confirmation-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.confirmation-badge-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--bg-soft-pink);
+  color: var(--brand-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 1.5rem;
+  border: 2px solid var(--border-rose);
+}
+
+.confirmation-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--brand-rose-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-title {
+  font-size: 2.4rem;
+  color: var(--brand-brown);
+  margin-bottom: 1rem;
+}
+
+.confirmation-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 auto 2rem;
+}
+
+.order-id-box {
+  background-color: var(--bg-card);
+  border: 1.5px dashed var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 2rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.id-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  display: block;
+}
+
+.id-number {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--brand-brown);
+  display: block;
+  margin: 0.2rem 0;
+}
+
+.id-sub {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+.whatsapp-review-box {
+  background-color: #F0FDF4;
+  border: 1.5px solid #BBF7D0;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.wa-icon-wrap {
+  font-size: 2rem;
+  color: #16A34A;
+}
+
+.wa-text-content h3 {
+  font-size: 1.15rem;
+  color: #166534;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-sans);
+}
+
+.wa-text-content p {
+  font-size: 0.88rem;
+  color: #14532D;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.summary-recap-box {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.summary-recap-box h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 0.35rem;
+}
+
+.recap-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--brand-brown);
+}
+
+.recap-delivery {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-link-order {
+  font-size: 0.9rem;
+  color: var(--brand-rose-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .confirmation-card {
+    padding: 2.5rem 1.25rem;
+  }
+  .confirmation-title {
+    font-size: 1.9rem;
+  }
+  .whatsapp-review-box {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .confirmation-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .confirmation-actions .btn-rose,
+  .confirmation-actions .btn-secondary {
+    width: 100%;
+  }
+}
