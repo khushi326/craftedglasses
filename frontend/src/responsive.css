@@ -321,6 +321,27 @@ html, body {
   }
   .nav-container {
     padding: 0.65rem 0.85rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+  .nav-actions {
+    gap: 0.5rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+  .nav-actions .btn-secondary {
+    width: auto !important;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.78rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .mobile-toggle,
+  .mobile-toggle-container {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-right: 12px;
   }
   .brand-logo-img {
     width: 38px;
@@ -649,6 +670,32 @@ html, body {
 
   .nav-container {
     padding: 0.55rem 0.65rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-actions {
+    gap: 0.45rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .nav-actions .btn-secondary {
+    width: auto !important;
+    padding: 0.32rem 0.55rem;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .mobile-toggle,
+  .mobile-toggle-container {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-right: 12px;
+    padding: 0.35rem 0.55rem;
+    font-size: 1.15rem;
   }
 
   .floating-tag {
@@ -749,10 +796,53 @@ html, body {
   }
 
   .brand-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   .brand-subtitle {
-    font-size: 0.55rem;
+    font-size: 0.52rem;
+  }
+  .brand-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+  .brand-logo {
+    gap: 0.45rem;
+    min-width: 0;
+  }
+
+  .nav-container {
+    padding: 0.5rem 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-actions {
+    gap: 0.35rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .nav-actions .btn-secondary {
+    width: auto !important;
+    padding: 0.28rem 0.45rem;
+    font-size: 0.72rem;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .nav-action-link {
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .mobile-toggle,
+  .mobile-toggle-container {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-right: 12px;
+    padding: 0.32rem 0.5rem;
+    font-size: 1.1rem;
   }
 
   .top-banner {

@@ -78,7 +78,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle Button */}
           <button
-            className="mobile-toggle"
+            className="mobile-toggle mobile-toggle-container"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
