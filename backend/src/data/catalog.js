@@ -23,11 +23,9 @@ export const PRODUCTS_DATA = [
     shortDescription: 'Real dried florals preserved in crystal-clear glossy resin with custom gold foil lettering.',
     description: 'Each phone case is meticulously hand-poured with real botanicals, dried rose petals, and subtle gold flakes. Customise it with your name or initials to carry a piece of nature and memory wherever you go.',
     materials: ['High-Grade TPU Edge', 'Crystal Clear Bio-Resin', 'Real Dried Botanicals', 'Metallic Gold Leaf'],
-    image: 'https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/pressed-flower-case.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?auto=format&fit=crop&w=800&q=80',
+      '/assets/products/pressed-flower-case.jpg',
     ],
     availableOptions: {
       finishTypes: ['Glossy Resin', 'Matte Soft-Touch'],
@@ -55,10 +53,9 @@ export const PRODUCTS_DATA = [
     shortDescription: 'Distressed vintage wood frame with custom mounted polaroid photo and hand-lettered plaque.',
     description: 'A timeless, museum-grade memory frame crafted with natural reclaimed pine, distressed vintage finish, and delicate dried gypsophila arrangements.',
     materials: ['Solid Reclaimed Pine', 'Distressed Gold Patina', 'UV Glass Protection', 'Handmade Deckle-Edge Paper'],
-    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/vintage-wooden-photo-frame.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
+      '/assets/products/vintage-wooden-photo-frame.jpg',
     ],
     availableOptions: {
       sizes: ['Small (5x7 inches)', 'Medium (8x10 inches)', 'Large (10x12 inches)'],
@@ -86,10 +83,9 @@ export const PRODUCTS_DATA = [
     shortDescription: 'Coffee-stained deckle-edged paper, dip-pen calligraphy, dried lavender sprig, and custom wax seal.',
     description: 'An emotional, keepsake letter written with traditional dip-pen calligraphy on artisanal textured handmade cotton paper.',
     materials: ['100% Recycled Cotton Rag Paper (150 GSM)', 'Archival Brown Calligraphy Ink', 'Real Dried Lavender Sprigs', 'Metallic Sealing Wax'],
-    image: 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/handwritten-wax-sealed-letter.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80',
+      '/assets/products/handwritten-wax-sealed-letter.jpg',
     ],
     availableOptions: {
       envelopeStyles: ['Artisanal Brown Kraft', 'Soft Rose Handmade Cotton', 'Vintage Parchment'],
@@ -116,10 +112,9 @@ export const PRODUCTS_DATA = [
     shortDescription: 'Delicate phone wristlet hand-strung with genuine freshwater pearls, lampwork beads, and gold accents.',
     description: 'Add a vintage, whimsical flair to your phone or camera with this handcrafted phone charm.',
     materials: ['Natural Freshwater Baroque Pearls', 'Rose Quartz & Czech Glass Beads', '18K Gold Plated Spacers', 'Reinforced Braided Cord'],
-    image: 'https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/beaded-pearl-phone-charm.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80',
+      '/assets/products/beaded-pearl-phone-charm.jpg',
     ],
     availableOptions: {
       lengths: ['Wristlet Loop (18 cm)', 'Long Shoulder Lanyard (45 cm)'],
@@ -146,10 +141,9 @@ export const PRODUCTS_DATA = [
     shortDescription: '12 custom photo cards printed on textured linen cardstock with solid walnut wood display stand.',
     description: 'Celebrate 12 months of memories with personalized polaroid-style photos on a handcrafted walnut block.',
     materials: ['Solid Walnut Wood Block', '300 GSM Textured Linen Paper', 'Brass Binder Pin', 'Gift Box with Ribbon'],
-    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/handcrafted-memory-calendar.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80',
+      '/assets/products/handcrafted-memory-calendar.jpg',
     ],
     availableOptions: {
       startMonths: ['January 2026', 'Current Month Onward', 'Custom 12-Month Range'],
@@ -176,10 +170,9 @@ export const PRODUCTS_DATA = [
     shortDescription: 'Tailored luxury gift box curated around your personal love story or friendship memory.',
     description: 'Our master crafters work with you to create an entirely one-of-a-kind bespoke keepsake.',
     materials: ['Handmade Wooden Keepsake Chest', 'Botanical Soy Wax Sachet', 'Handmade Journal', 'Vintage Ribbons & Wax Seals'],
-    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/products/bespoke-custom-gift-hamper.png',
     gallery: [
-      'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
+      '/assets/products/bespoke-custom-gift-hamper.png',
     ],
     availableOptions: {
       boxSizes: ['Classic Keepsake Chest', 'Grand Luxury Trunk'],

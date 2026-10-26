@@ -23,7 +23,10 @@ export const ensureCatalog = async () => {
     for (const prod of PRODUCTS_DATA) {
       const result = await Product.updateOne(
         { id: prod.id },
-        { $setOnInsert: prod },
+        {
+          $setOnInsert: prod,
+          $set: { image: prod.image, gallery: prod.gallery },
+        },
         { upsert: true }
       );
       if (result.upsertedCount) createdProducts += 1;

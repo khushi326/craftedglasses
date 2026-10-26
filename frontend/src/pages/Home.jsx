@@ -44,7 +44,7 @@ export default function Home() {
           <div className="hero-visual">
             <div className="hero-image-card main-hero-img">
               <img
-                src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80"
+                src="/assets/products/bespoke-custom-gift-hamper.png"
                 alt="Handcrafted Gift Box"
                 className="hero-img"
               />
@@ -189,30 +189,30 @@ export default function Home() {
           </div>
 
           <div className="instagram-grid">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="insta-item">
-              <img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=400&q=80" alt="Resin case" />
+            <a href="https://instagram.com/craftedglasses" target="_blank" rel="noreferrer" className="insta-item">
+              <img src="/assets/products/pressed-flower-case.jpg" alt="Resin case" />
               <div className="insta-overlay"><span>📷 View Post</span></div>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="insta-item">
-              <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=400&q=80" alt="Wax seal letter" />
+            <a href="https://instagram.com/craftedglasses" target="_blank" rel="noreferrer" className="insta-item">
+              <img src="/assets/products/handwritten-wax-sealed-letter.jpg" alt="Wax seal letter" />
               <div className="insta-overlay"><span>📷 View Post</span></div>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="insta-item">
-              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400&q=80" alt="Wood frame" />
+            <a href="https://instagram.com/craftedglasses" target="_blank" rel="noreferrer" className="insta-item">
+              <img src="/assets/products/vintage-wooden-photo-frame.jpg" alt="Wood frame" />
               <div className="insta-overlay"><span>📷 View Post</span></div>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="insta-item">
-              <img src="https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=400&q=80" alt="Pearl charm" />
+            <a href="https://instagram.com/craftedglasses" target="_blank" rel="noreferrer" className="insta-item">
+              <img src="/assets/products/beaded-pearl-phone-charm.jpg" alt="Pearl charm" />
               <div className="insta-overlay"><span>📷 View Post</span></div>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="insta-item">
-              <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=400&q=80" alt="Memory calendar" />
+            <a href="https://instagram.com/craftedglasses" target="_blank" rel="noreferrer" className="insta-item">
+              <img src="/assets/products/handcrafted-memory-calendar.jpg" alt="Memory calendar" />
               <div className="insta-overlay"><span>📷 View Post</span></div>
             </a>
           </div>
 
           <div className="insta-action text-center">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="btn-secondary">
+            <a href="https://instagram.com/craftedglasses" target="_blank" rel="noreferrer" className="btn-secondary">
               Follow Us on Instagram &rarr;
             </a>
           </div>
