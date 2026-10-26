@@ -19,10 +19,14 @@ export default function Navbar() {
       <nav className="nav-container">
         {/* Brand Logo */}
         <Link to="/" className="brand-logo" onClick={closeMenu}>
-          <span className="logo-sparkle">✦</span>
+          <img
+            src="/assets/cg-logo.png"
+            alt="Craftedglasses logo"
+            className="brand-logo-img"
+          />
           <div className="brand-text-wrap">
             <span className="brand-title">Craftedglasses</span>
-            <span className="brand-subtitle">Handmade Keepsakes & Stories</span>
+            <span className="brand-subtitle">Handmade Keepsakes &amp; Stories</span>
           </div>
         </Link>
 

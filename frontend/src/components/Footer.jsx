@@ -10,7 +10,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="footer-col brand-col">
             <Link to="/" className="footer-logo">
-              <span className="logo-sparkle">✦</span>
+              <img
+                src="/assets/cg-logo.png"
+                alt="Craftedglasses Logo"
+                className="footer-logo-img"
+              />
               <span className="footer-brand-title">Craftedglasses</span>
             </Link>
             <p className="footer-tagline">

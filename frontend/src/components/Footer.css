@@ -18,9 +18,16 @@
 .footer-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.65rem;
   text-decoration: none;
   margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .footer-brand-title {
