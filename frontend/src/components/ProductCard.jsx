@@ -5,6 +5,14 @@ import './ProductCard.css';
 export default function ProductCard({ product }) {
   if (!product) return null;
 
+  const displayCategory =
+    product.categoryName === 'Phone Cases'
+      ? 'Mobile Covers'
+      : product.categoryName ||
+        (product.category === 'mobile-covers' || product.category === 'phone-cases'
+          ? 'Mobile Covers'
+          : product.category || 'Handcrafted');
+
   return (
     <div className="product-card">
       <div className="product-image-wrap">
@@ -24,7 +32,7 @@ export default function ProductCard({ product }) {
       </div>
 
       <div className="product-info">
-        <span className="product-category">{product.categoryName}</span>
+        <span className="product-category">{displayCategory}</span>
         <h3 className="product-name">
           <Link to={`/product/${product.id}`}>{product.name}</Link>
         </h3>

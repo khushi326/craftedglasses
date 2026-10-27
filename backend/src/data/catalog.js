@@ -2,10 +2,10 @@
  * Shared catalog used by the one-off seed script and by startup auto-seed.
  */
 export const CATEGORIES_DATA = [
-  { name: 'Phone Cases', slug: 'phone-cases', icon: '📱', description: 'Handcrafted custom resin phone cases' },
+  { name: 'Mobile Covers', slug: 'mobile-covers', icon: '📱', description: 'Handcrafted custom resin phone cases and mobile covers' },
   { name: 'Photo Frames', slug: 'photo-frames', icon: '🖼️', description: 'Vintage and antique photo frames' },
-  { name: 'Vintage Letters', slug: 'vintage-letters', icon: '📜', description: 'Handwritten wax-sealed letters' },
   { name: 'Phone Charms', slug: 'phone-charms', icon: '📿', description: 'Beaded and pearl phone charms' },
+  { name: 'Vintage Letters', slug: 'vintage-letters', icon: '📜', description: 'Handwritten wax-sealed letters' },
   { name: 'Memory Calendars', slug: 'memory-calendars', icon: '🗓️', description: 'Custom 12-month photo memory calendars' },
   { name: 'Custom Gifts', slug: 'custom-gifts', icon: '🎁', description: 'Bespoke luxury gift hampers' },
 ];
@@ -13,10 +13,10 @@ export const CATEGORIES_DATA = [
 export const PRODUCTS_DATA = [
   {
     id: 'pressed-flower-case',
-    type: 'phone-case',
+    type: 'mobile-cover',
     name: 'Pressed Flower Resin Phone Case',
-    category: 'phone-cases',
-    categoryName: 'Phone Cases',
+    category: 'mobile-covers',
+    categoryName: 'Mobile Covers',
     price: 899,
     availability: 'In Stock',
     badge: 'Bestseller',

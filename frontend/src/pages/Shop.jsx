@@ -2,7 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { getApiBase } from '../services/api';
-import { PRODUCTS, CATEGORIES } from '../data/products';
+import { PRODUCTS, CATEGORIES, matchCategory } from '../data/products';
 import './Shop.css';
 
 export default function Shop() {
@@ -62,6 +62,8 @@ export default function Shop() {
     const cat = searchParams.get('category');
     if (cat) {
       setSelectedCategory(cat);
+    } else {
+      setSelectedCategory('all');
     }
   }, [searchParams]);
 
@@ -75,17 +77,33 @@ export default function Shop() {
     }
   };
 
+  const isCatActive = (catId) => {
+    if (selectedCategory === catId) return true;
+    if (
+      (selectedCategory === 'mobile-covers' || selectedCategory === 'phone-cases') &&
+      (catId === 'mobile-covers' || catId === 'phone-cases')
+    ) {
+      return true;
+    }
+    return false;
+  };
+
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
-      const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-      const q = searchQuery.toLowerCase();
+      const matchesCategory = matchCategory(product.category, selectedCategory);
+      const q = searchQuery.toLowerCase().trim();
       const matchesSearch =
+        !q ||
         (product.name || '').toLowerCase().includes(q) ||
         (product.shortDescription || '').toLowerCase().includes(q) ||
         (product.categoryName || '').toLowerCase().includes(q);
       return matchesCategory && matchesSearch;
     });
   }, [products, selectedCategory, searchQuery]);
+
+  const activeCategoryObj = useMemo(() => {
+    return categories.find((c) => matchCategory(c.id, selectedCategory));
+  }, [categories, selectedCategory]);
 
   return (
     <div className="shop-page page-wrapper">
@@ -122,7 +140,7 @@ export default function Shop() {
           {categories.map((category) => (
             <button
               key={category.id}
-              className={`cat-pill ${selectedCategory === category.id ? 'active' : ''}`}
+              className={`cat-pill ${isCatActive(category.id) ? 'active' : ''}`}
               onClick={() => handleCategoryChange(category.id)}
             >
               <span className="pill-icon">{category.icon}</span>
@@ -136,7 +154,7 @@ export default function Shop() {
           Showing <strong>{filteredProducts.length}</strong> handcrafted item{filteredProducts.length !== 1 ? 's' : ''}
           {selectedCategory !== 'all' && (
             <span className="active-filter-badge">
-              Category: {categories.find(c => c.id === selectedCategory)?.name}
+              Category: {activeCategoryObj?.name || selectedCategory}
               <button onClick={() => handleCategoryChange('all')}>✕</button>
             </span>
           )}

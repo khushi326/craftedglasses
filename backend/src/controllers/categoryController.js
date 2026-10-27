@@ -5,12 +5,30 @@ import { CATEGORIES_DATA } from '../data/catalog.js';
 // @route GET /api/categories
 export const getAllCategories = async (req, res) => {
   try {
-    const raw = await Category.find().sort({ name: 1 });
+    const raw = await Category.find();
     const source = raw.length ? raw : CATEGORIES_DATA;
-    // Map slug -> id so the frontend category filter (category.id) works correctly.
+
+    // Preserve the curated order defined in CATEGORIES_DATA
+    const slugOrder = CATEGORIES_DATA.map((c) => c.slug);
+    const sortedSource = [...source].sort((a, b) => {
+      const idxA = slugOrder.indexOf(a.slug);
+      const idxB = slugOrder.indexOf(b.slug);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return a.name.localeCompare(b.name);
+    });
+
+    // Map slug -> id so the frontend category filter (category.id) works consistently
     const categories = [
       { id: 'all', name: 'All Products', icon: '✨', slug: 'all', description: 'Browse all handcrafted products.' },
-      ...source.map((c) => ({ id: c.slug, name: c.name, icon: c.icon, slug: c.slug, description: c.description })),
+      ...sortedSource.map((c) => ({
+        id: c.slug,
+        name: c.name,
+        icon: c.icon,
+        slug: c.slug,
+        description: c.description,
+      })),
     ];
     res.json({ success: true, categories });
   } catch (error) {

@@ -2,13 +2,35 @@ import Product from '../models/Product.js';
 import { PRODUCTS_DATA } from '../data/catalog.js';
 
 /**
- * @desc Get all products (public)
+ * @desc Get all products (public, supports category filtering)
  */
 export const getAllProducts = async (req, res) => {
   try {
-    const products = await Product.find({});
+    const { category } = req.query;
+    const query = {};
+
+    if (category && category !== 'all') {
+      if (category === 'mobile-covers' || category === 'phone-cases') {
+        query.category = { $in: ['mobile-covers', 'phone-cases'] };
+      } else {
+        query.category = category;
+      }
+    }
+
+    const products = await Product.find(query);
+
+    // Fallback if database has no seeded records yet
+    const fallbackList = category && category !== 'all'
+      ? PRODUCTS_DATA.filter((p) => {
+          if (category === 'mobile-covers' || category === 'phone-cases') {
+            return p.category === 'mobile-covers' || p.category === 'phone-cases';
+          }
+          return p.category === category;
+        })
+      : PRODUCTS_DATA;
+
     if (!products.length) {
-      return res.json({ success: true, count: PRODUCTS_DATA.length, data: PRODUCTS_DATA });
+      return res.json({ success: true, count: fallbackList.length, data: fallbackList });
     }
     res.json({ success: true, count: products.length, data: products });
   } catch (error) {

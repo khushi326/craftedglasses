@@ -5,21 +5,40 @@
 
 export const CATEGORIES = [
   { id: 'all', name: 'All Products', icon: '✨' },
-  { id: 'phone-cases', name: 'Phone Cases', icon: '📱' },
+  { id: 'mobile-covers', name: 'Mobile Covers', icon: '📱' },
   { id: 'photo-frames', name: 'Photo Frames', icon: '🖼️' },
-  { id: 'vintage-letters', name: 'Vintage Letters', icon: '📜' },
   { id: 'phone-charms', name: 'Phone Charms', icon: '📿' },
+  { id: 'vintage-letters', name: 'Vintage Letters', icon: '📜' },
   { id: 'memory-calendars', name: 'Memory Calendars', icon: '🗓️' },
   { id: 'custom-gifts', name: 'Custom Gifts', icon: '🎁' },
 ];
 
+/**
+ * Category matching helper supporting slug normalization and legacy aliases.
+ */
+export const matchCategory = (productCategory, selectedCategory) => {
+  if (!selectedCategory || selectedCategory === 'all') return true;
+  if (!productCategory) return false;
+  const pCat = String(productCategory).toLowerCase().trim();
+  const sCat = String(selectedCategory).toLowerCase().trim();
+  if (pCat === sCat) return true;
+  // Aliases for Mobile Covers / Phone Cases
+  if (
+    (sCat === 'mobile-covers' || sCat === 'phone-cases' || sCat === 'mobile-cover' || sCat === 'phone-case') &&
+    (pCat === 'mobile-covers' || pCat === 'phone-cases' || pCat === 'mobile-cover' || pCat === 'phone-case')
+  ) {
+    return true;
+  }
+  return false;
+};
+
 export const PRODUCTS = [
   {
     id: 'pressed-flower-case',
-    type: 'phone-case',
+    type: 'mobile-cover',
     name: 'Pressed Flower Resin Phone Case',
-    category: 'phone-cases',
-    categoryName: 'Phone Cases',
+    category: 'mobile-covers',
+    categoryName: 'Mobile Covers',
     price: 899,
     availability: 'In Stock',
     badge: 'Bestseller',

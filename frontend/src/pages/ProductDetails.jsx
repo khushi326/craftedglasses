@@ -74,6 +74,14 @@ export default function ProductDetails() {
   }
 
   // At this point `product` is guaranteed to be an object
+  const displayCategory =
+    product.categoryName === 'Phone Cases'
+      ? 'Mobile Covers'
+      : product.categoryName ||
+        (product.category === 'mobile-covers' || product.category === 'phone-cases'
+          ? 'Mobile Covers'
+          : product.category || 'Handcrafted');
+  const categoryLink = product.category === 'phone-cases' ? 'mobile-covers' : product.category;
 
   return (
     <div className="product-details-page page-wrapper">
@@ -84,7 +92,7 @@ export default function ProductDetails() {
           <span className="crumb-sep">/</span>
           <Link to="/shop">Shop</Link>
           <span className="crumb-sep">/</span>
-          <Link to={`/shop?category=${product.category}`}>{product.categoryName}</Link>
+          <Link to={`/shop?category=${categoryLink}`}>{displayCategory}</Link>
           <span className="crumb-sep">/</span>
           <span className="current-crumb">{product.name}</span>
         </nav>
@@ -117,7 +125,7 @@ export default function ProductDetails() {
 
           {/* Right Column – Details & Customisation */}
           <div className="product-info-col">
-            <span className="product-category-tag">{product.categoryName}</span>
+            <span className="product-category-tag">{displayCategory}</span>
             <h1 className="product-detail-title">{product.name}</h1>
             <div className="product-price-box">
               <span className="price-label">Handcrafted Price</span>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { PRODUCTS, CATEGORIES, MOCK_ORDERS } from '../data/products';
+import { PRODUCTS, CATEGORIES, MOCK_ORDERS, matchCategory } from '../data/products';
 import { getApiBase } from '../services/api';
 import './AdminDashboard.css';
 
@@ -563,7 +563,7 @@ export default function AdminDashboard() {
                       const count =
                         cat.id === 'all'
                           ? productList.length
-                          : productList.filter((p) => p.category === cat.id).length;
+                          : productList.filter((p) => matchCategory(p.category, cat.id)).length;
                       return (
                         <tr key={cat.id}>
                           <td>
