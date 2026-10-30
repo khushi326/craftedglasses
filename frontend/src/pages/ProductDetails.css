@@ -792,21 +792,6 @@
   }
 }
 
-@media (max-width: 900px) {
-  .product-details-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  .product-gallery-col {
-    position: static;
-  }
-  .prev-btn {
-    left: 8px;
-  }
-  .next-btn {
-    right: 8px;
-  }
-}
 
 @media (max-width: 640px) {
   .photo-grid-showcase {
