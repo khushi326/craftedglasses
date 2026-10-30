@@ -180,6 +180,22 @@
 }
 
 /* Info Column */
+.product-info-col {
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+
+@media (max-width: 900px) {
+  .product-details-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .product-gallery-col {
+    position: static; /* disable sticky on mobile */
+  }
+}
+
 .product-category-tag {
   font-size: 0.8rem;
   text-transform: uppercase;
